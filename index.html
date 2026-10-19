@@ -1,1 +1,14 @@
-<!doctype html><html lang="es"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Social Intelligence Lab · UTB</title></head><body><div id="root"></div><script type="module" src="/src/main.jsx"></script></body></html>
+<!doctype html>
+<html lang="es">
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Social Intelligence Lab · UTB</title>
+<style>body{margin:0;background:#071224;color:#e8f4ff;font-family:system-ui,Arial,sans-serif}#boot-status{padding:25px;max-width:650px;margin:12vh auto;background:#112742;border:1px solid #335b7d;border-radius:16px}#boot-status h1{color:#61e3f8;font-size:23px}#boot-status p{line-height:1.5}#boot-error{white-space:pre-wrap;overflow-wrap:anywhere;color:#ff9cb0}</style>
+</head>
+<body>
+<div id="root"><div id="boot-status"><h1>Social Intelligence Lab · UTB</h1><p>Preparando el laboratorio interactivo…</p><p id="boot-error"></p></div></div>
+<script>
+window.addEventListener('error',function(e){var x=document.getElementById('boot-error');if(x)x.textContent='Error de carga: '+(e.message||'recurso no disponible')});
+window.addEventListener('unhandledrejection',function(e){var x=document.getElementById('boot-error');if(x)x.textContent='Error al iniciar: '+String(e.reason||'error desconocido')});
+setTimeout(function(){var s=document.getElementById('boot-status');if(s){var x=document.getElementById('boot-error');if(x&&!x.textContent)x.textContent='La interfaz no se ha iniciado. Comprueba que GitHub Pages esté publicando el workflow de Actions y no la rama directamente.'}},9000);
+</script>
+<script type="module" src="/src/main.jsx"></script>
+</body></html>
